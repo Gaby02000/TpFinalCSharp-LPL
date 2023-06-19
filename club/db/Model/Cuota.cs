@@ -78,10 +78,23 @@ namespace clubApp.db
             get { return _fecha_pago; }
             set { _fecha_pago = value; }
         }
-        
+
         #endregion
         // -- TODO --
         #region Relaciones con otras entidades
+        public ActividadSocio CuotaActividadSocio
+        {
+            get
+            {
+                if (_actividad_socioObj == null && this._cod_act_socio != 0)
+                {
+                    _actividad_socioObj = new ActividadSocio();
+                    _actividad_socioObj = ActividadSocio.FindByKeyStatic(this._cod_act_socio);
+                }
+                return _actividad_socioObj;
+            }
+            set { _actividad_socioObj = value; }
+        }
         // implementar con Actividad Socio        
         #endregion
     }

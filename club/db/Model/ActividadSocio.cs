@@ -59,7 +59,19 @@ namespace clubApp.db
         #endregion
         // -- TODO --
         #region Relaciones con otras entidades
-
+        public TipoActividad TipoActividadSocio
+        {
+            get
+            {
+                if (_tipo_actividad == null && this._cod_act != 0)
+                {
+                    _tipo_actividad = new TipoActividad();
+                    _tipo_actividad = TipoActividad.FindByKeyStatic(this._cod_act);
+                }
+                return _tipo_actividad;
+            }
+            set { _tipo_actividad = value; }
+        }
         // implementar TipoActividad
 
         #endregion
