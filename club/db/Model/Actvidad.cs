@@ -16,6 +16,7 @@ namespace clubApp.db
         private DateTime? _fecha_hasta;
 
         private TipoActividad _tipo_actividad = null;
+        private Profesor _profesor = null;
         #endregion
 
         #region propiedades publicas
@@ -57,6 +58,19 @@ namespace clubApp.db
         #region Relaciones con otras entidades
 
         // implementar TipoActividad
+        public TipoActividad TipoActividadActividad
+        {
+            get
+            {
+                if (_tipo_actividad == null && this._cod_tipo_act != 0)
+                {
+                    _tipo_actividad = new TipoActividad();
+                    _tipo_actividad = TipoActividad.FindByKeyStatic(this._cod_tipo_act);
+                }
+                return _tipo_actividad;
+            }
+            set { _tipo_actividad = value; }
+        }
 
         #endregion
     }
