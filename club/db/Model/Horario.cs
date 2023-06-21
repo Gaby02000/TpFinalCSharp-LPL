@@ -16,7 +16,10 @@ namespace clubApp.db
         private DateTime _hora_desde;
         private DateTime _hora_hasta;
         private int _cod_lugar;
-        #endregion
+        private Lugar _lugar;
+        private Actividad _actividad;
+
+            #endregion
 
         #region propiedades publicas
 
@@ -66,6 +69,33 @@ namespace clubApp.db
         // -- TODO --
         #region Relaciones con otras entidades
         // implementar Actividad
+        public Actividad HorarioActividad
+        {
+            get
+            {
+                if (_actividad == null && this._cod_act != 0)
+                {
+                    return _actividad.FindbyKey(this._cod_act);
+
+                }
+                return null;
+            }
+            set { _actividad = value; }
+        }
+        public Lugar HorarioLugar
+        {
+            get
+            {
+                if (_lugar == null && this._cod_lugar != 0)
+                {
+                    _lugar = new Lugar();
+                    _lugar.FindbyKey(this._cod_lugar);
+                }
+                return _lugar;
+            }
+            set { _lugar = value; }
+        }
+
         // implementar Lugar
         #endregion
     }
