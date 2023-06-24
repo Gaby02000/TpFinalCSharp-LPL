@@ -135,6 +135,7 @@
             this.TelefonoTxt.Size = new System.Drawing.Size(166, 20);
             this.TelefonoTxt.TabIndex = 6;
             this.TelefonoTxt.Tag = "Telefono";
+            this.TelefonoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoTxt_KeyPress);
             // 
             // TelefonoLbl
             // 
@@ -174,6 +175,7 @@
             this.NombresTxt.Size = new System.Drawing.Size(166, 20);
             this.NombresTxt.TabIndex = 2;
             this.NombresTxt.Tag = "Nombres";
+            this.NombresTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombresTxt_KeyPress);
             // 
             // NombresLbl
             // 
@@ -194,7 +196,7 @@
             this.ApellidoTxt.Size = new System.Drawing.Size(160, 20);
             this.ApellidoTxt.TabIndex = 1;
             this.ApellidoTxt.Tag = "Apellido";
-            this.ApellidoTxt.TextChanged += new System.EventHandler(this.ApellidoTxt_TextChanged);
+            this.ApellidoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidoTxt_KeyPress);
             // 
             // ApellidoLbl
             // 
