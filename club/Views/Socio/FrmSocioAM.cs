@@ -59,16 +59,16 @@ namespace clubApp.Views
                 LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
-                    this.Text = "Ingreso de socio nuevo";
+                    this.Text = "Ingreso de nuevo Socio...";
                     this.LocalidadCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
-                    this.Text = "Actualizar datos de socio";
+                    this.Text = "Actualizacion de datos de Socio...";
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
-                    this.Text = "Consulta de socio";
+                    this.Text = "Consulta de datos de Socio...";
                     this.GuardarBtn.Visible = false;
                 }
             }
@@ -85,39 +85,17 @@ namespace clubApp.Views
             string operacionLog = "";
             string detalleLog="";
             MainView.Instance.Cursor = Cursors.WaitCursor;
-
-            // VALIDACIONES DE CAMPOS A INGRESAR.
+                       
+            
             if (ApellidoTxt.Text == "")
             {
-                MessageBox.Show("Falta apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese apellido", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ApellidoTxt.Focus();
                 return;
             }
-            if (NombresTxt.Text == "")
-            {
-                MessageBox.Show("Falta nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NombresTxt.Focus();
-                return;
-            }
-            if (DniTxt.Text == "")
-            {
-                MessageBox.Show("Falta documento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DniTxt.Focus();
-                return;
-            }
-            if (DomicilioTxt.Text == "")
-            {
-                MessageBox.Show("Falta domicilio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DomicilioTxt.Focus();
-                return;
-            }
-            if (TelefonoTxt.Text == "")
-            {
-                MessageBox.Show("Falta telefono", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                TelefonoTxt.Focus();
-                return;
-            }
-
+            // validar...
+            //.....
+            //....
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Socio = new Socio();
@@ -145,7 +123,6 @@ namespace clubApp.Views
             Socio.Observaciones = ObservacionesTxt.Text;
             Socio.Telefono = TelefonoTxt.Text;
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Socio);
-
             // intentar guardar en la Base de datos.
             try
             {
@@ -218,33 +195,20 @@ namespace clubApp.Views
             {
                 e.Handled = true;
             }            
-        } 
+        }
+
+        private void ApellidoTxt_TextChanged(object sender, EventArgs e)
+        {
+            if(!this.ApellidoTxt.Text.All(c=>  Char.IsLetter(c) || Char.IsWhiteSpace(c)))
+            {
+             
+            }
+        }   
+
         private void ActividadesBtn_Click(object sender, EventArgs e)
         {
 
         }
-        private void ApellidoTxt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
 
-        private void NombresTxt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void TelefonoTxt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
     }
 }
