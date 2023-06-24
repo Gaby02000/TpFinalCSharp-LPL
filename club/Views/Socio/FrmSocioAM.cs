@@ -86,7 +86,7 @@ namespace clubApp.Views
             string detalleLog="";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            // VALIDACIONES DE CAMPOS A INGRESAR.
+            #region validaciones
             if (ApellidoTxt.Text == "")
             {
                 MessageBox.Show("Falta apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -117,6 +117,13 @@ namespace clubApp.Views
                 TelefonoTxt.Focus();
                 return;
             }
+            if(LocalidadCbo.Text == "")
+            {
+                MessageBox.Show("Falta seleccionar localidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LocalidadCbo.Focus();
+                return;
+            }
+            #endregion
 
             if (OperacionForm == FrmOperacion.frmAlta)
             {

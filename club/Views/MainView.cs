@@ -118,12 +118,12 @@ namespace clubApp.Views
         {
             if (ev.Status == TipoOperacionStatus.stOK)
             {
-                MessageBox.Show("Operacion realizada correctamente " , "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Operacion realizada correctamente " , "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Verificar si hay Form de Listado para poder actualizar la lista de datos..
             }
             else
             {
-                MessageBox.Show("Ocurrio un error: " + ev.Mensaje,"Error...",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrio un error: " + ev.Mensaje,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }             
 
@@ -168,7 +168,7 @@ namespace clubApp.Views
         
         private void MainView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Desea salir del sistema?", "salida..", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Desea salir del sistema?", "salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Dispose();
                 Application.Exit();
