@@ -82,7 +82,8 @@ namespace clubApp.db
         #endregion
         // -- TODO --
         #region Relaciones con otras entidades
-        public ActividadSocio CuotaActividadSocio
+        // relacion con Actividad Socio   
+        public ActividadSocio ActividadSocioCuota
         {
             get
             {
@@ -95,7 +96,7 @@ namespace clubApp.db
             }
             set { _actividad_socioObj = value; }
         }
-        // implementar con Actividad Socio        
+             
         #endregion
     }
 

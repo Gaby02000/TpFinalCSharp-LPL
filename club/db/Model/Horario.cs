@@ -68,21 +68,21 @@ namespace clubApp.db
 
         // -- TODO --
         #region Relaciones con otras entidades
-        // implementar Actividad
-        public Actividad HorarioActividad
+        // Relacion con Actividad
+        public Actividad ActividadHorario
         {
             get
             {
                 if (_actividad == null && this._cod_act != 0)
                 {
-                    return _actividad.FindbyKey(this._cod_act);
-
+                    _actividad = new Actividad();
+                    _actividad.FindbyKey(this._cod_act);
                 }
-                return null;
+                return _actividad;
             }
             set { _actividad = value; }
         }
-        public Lugar HorarioLugar
+        public Lugar LugarHorario
         {
             get
             {

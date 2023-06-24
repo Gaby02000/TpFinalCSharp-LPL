@@ -61,3 +61,36 @@ C:\Users\gabriel\Desktop\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.C
 C:\Users\gabriel\Desktop\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.CopyComplete
 C:\Users\gabriel\Desktop\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.exe
 C:\Users\gabriel\Desktop\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.pdb
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Properties.Resources.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmProfesorBusq.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmLogin.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.MainView.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmListadoSocios.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmSocioBusq.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmSocioList.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmSocioAM.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmListadoProfesores.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.Views.FrmProfesorAM.resources
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.GenerateResource.cache
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.exe
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.pdb
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\clubApp.exe.config
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\clubApp.exe
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\clubApp.pdb
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Newtonsoft.Json.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Npgsql.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Mono.Security.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Newtonsoft.Json.pdb
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Newtonsoft.Json.xml
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Npgsql.pdb
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\Npgsql.xml
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\de\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\es\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\fi\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\fr\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\ja\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Users\USUARIO\Desktop\Laboratorio de Programacion y Lenguajes\C#\Practica\GitHub\TpFinalCSharp-LPL\club\obj\x86\Release\clubApp.csproj.CopyComplete

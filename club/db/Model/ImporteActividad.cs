@@ -15,7 +15,8 @@ namespace clubApp.db
         private int _anio;
         private int _mes;
         private float _importe;
-        private TipoActividad _tipo_actividad=null;
+
+        private TipoActividad _tipo_actividad = null;
         #endregion
 
         #region propiedades publicas
@@ -58,8 +59,8 @@ namespace clubApp.db
         #endregion
         // -- TODO --
         #region Relaciones con otras entidades
-        // implementar las relaciones.....
-        public TipoActividad TipoActividadActividad
+        // relacion con TipoActividad
+        public TipoActividad TipoActividadImporteActividad
         {
             get
             {
@@ -73,7 +74,7 @@ namespace clubApp.db
             set { _tipo_actividad = value; }
         }
 
-        // Especie
+        
         #endregion
     }
 

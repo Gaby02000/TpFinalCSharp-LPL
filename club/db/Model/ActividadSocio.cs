@@ -16,6 +16,8 @@ namespace clubApp.db
         private DateTime _fecha_inicio;
         private DateTime? _fecha_fin;
 
+        private Actividad _actividad = null;
+        private Socio _socio = null;
         private TipoActividad _tipo_actividad = null;
         #endregion
 
@@ -58,8 +60,40 @@ namespace clubApp.db
 
         #endregion
         // -- TODO --
+
         #region Relaciones con otras entidades
-        public TipoActividad TipoActividadSocio
+        // relacion con Actividad
+        public Actividad ActividadActividadSocio
+        {
+            get
+            {
+                if (_tipo_actividad == null && this._cod_act != 0)
+                {
+                    _actividad = new Actividad();
+                    //_actividad = Actividad.FindByKeyStatic(this._cod_act);
+                    _actividad.FindbyKey(this._cod_act);
+                }
+                return _actividad;
+            }
+            set { _actividad = value; }
+        }
+        // relacion con Socio
+        public Socio SocioActividadSocio
+        {
+            get
+            {
+                if (_socio == null && this._nro_socio != 0)
+                {
+                    _socio = new Socio();
+                    //_socio = Socio.FindByKeyStatic(this._nro_socio);
+                    _socio.FindbyKey(this._nro_socio);
+                }
+                return _socio;
+            }
+            set { _socio = value; }
+        }
+        // relacion con TipoActividad(?)
+        public TipoActividad TipoActividadActividadSocio
         {
             get
             {
@@ -72,7 +106,7 @@ namespace clubApp.db
             }
             set { _tipo_actividad = value; }
         }
-        // implementar TipoActividad
+       
 
         #endregion
     }

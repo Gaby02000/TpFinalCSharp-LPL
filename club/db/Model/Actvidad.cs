@@ -57,7 +57,7 @@ namespace clubApp.db
         // -- TODO --
         #region Relaciones con otras entidades
 
-        // implementar TipoActividad
+        // relacion con TipoActividad
         public TipoActividad TipoActividadActividad
         {
             get
@@ -70,6 +70,22 @@ namespace clubApp.db
                 return _tipo_actividad;
             }
             set { _tipo_actividad = value; }
+        }
+
+        // relacion con Profesor
+        public Profesor ProfesorActividad
+        {
+            get
+            {
+                if (_profesor == null && this._legajo_profe != 0)
+                {
+                    _profesor = new Profesor();
+                    //_profesor = Profesor.FindByKeyStatic(this._legajo_profe);
+                    _profesor.FindbyKey(this._legajo_profe);
+                }
+                return _profesor;
+            }
+            set { _profesor = value; }
         }
 
         #endregion
