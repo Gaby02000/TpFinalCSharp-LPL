@@ -51,5 +51,9 @@ namespace clubApp.db
                 lista.Sort(compara);
             return lista;
         }
+        public static Cuota FindByKeyStatic(params object[] key)
+        {
+            return ORMDB<Cuota>.FindbyKey(key);
+        }
     }
 }

@@ -55,5 +55,9 @@ namespace clubApp.db
                 lista.Sort(compara);
             return lista;
         }
+        public static Socio FindByKeyStatic(params object[] key)
+        {
+            return ORMDB<Socio>.FindbyKey(key);
+        }
     }
 }

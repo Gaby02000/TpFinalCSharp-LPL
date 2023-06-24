@@ -59,5 +59,9 @@ namespace clubApp.db
             return true;
             return false;
         }
+        public static Profesor FindByKeyStatic(params object[] key)
+        {
+            return ORMDB<Profesor>.FindbyKey(key);
+        }
     }
 }

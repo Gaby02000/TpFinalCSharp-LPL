@@ -46,5 +46,9 @@ namespace clubApp.db
                 lista.Sort(compara);
             return lista;
         }
+        public static Lugar FindByKeyStatic(params object[] key)
+        {
+            return ORMDB<Lugar>.FindbyKey(key);
+        }
     }
 }

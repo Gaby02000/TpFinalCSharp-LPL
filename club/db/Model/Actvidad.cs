@@ -80,8 +80,7 @@ namespace clubApp.db
                 if (_profesor == null && this._legajo_profe != 0)
                 {
                     _profesor = new Profesor();
-                    //_profesor = Profesor.FindByKeyStatic(this._legajo_profe);
-                    _profesor.FindbyKey(this._legajo_profe);
+                    _profesor = Profesor.FindByKeyStatic(this._legajo_profe);
                 }
                 return _profesor;
             }

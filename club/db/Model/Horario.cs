@@ -76,7 +76,7 @@ namespace clubApp.db
                 if (_actividad == null && this._cod_act != 0)
                 {
                     _actividad = new Actividad();
-                    _actividad.FindbyKey(this._cod_act);
+                    _actividad = Actividad.FindByKeyStatic(this._cod_act);
                 }
                 return _actividad;
             }
@@ -89,7 +89,7 @@ namespace clubApp.db
                 if (_lugar == null && this._cod_lugar != 0)
                 {
                     _lugar = new Lugar();
-                    _lugar.FindbyKey(this._cod_lugar);
+                    _lugar = Lugar.FindByKeyStatic(this._cod_lugar);
                 }
                 return _lugar;
             }

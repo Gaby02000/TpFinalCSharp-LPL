@@ -50,5 +50,9 @@ namespace clubApp.db
                 lista.Sort(compara);
             return lista;
         }
+        public static Actividad FindByKeyStatic(params object[] key)
+        {
+            return ORMDB<Actividad>.FindbyKey(key);
+        }
     }
 }
