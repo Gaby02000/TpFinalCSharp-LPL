@@ -59,16 +59,16 @@ namespace clubApp.Views
                 LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
-                    this.Text = "Ingreso de nuevo Socio...";
+                    this.Text = "Ingreso de socio nuevo";
                     this.LocalidadCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
-                    this.Text = "Actualizacion de datos de Socio...";
+                    this.Text = "Actualizar datos de socio";
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
-                    this.Text = "Consulta de datos de Socio...";
+                    this.Text = "Consulta de socio";
                     this.GuardarBtn.Visible = false;
                 }
             }
@@ -85,17 +85,46 @@ namespace clubApp.Views
             string operacionLog = "";
             string detalleLog="";
             MainView.Instance.Cursor = Cursors.WaitCursor;
-                       
-            
+
+            #region validaciones
             if (ApellidoTxt.Text == "")
             {
-                MessageBox.Show("Ingrese apellido", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Falta apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ApellidoTxt.Focus();
                 return;
             }
-            // validar...
-            //.....
-            //....
+            if (NombresTxt.Text == "")
+            {
+                MessageBox.Show("Falta nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NombresTxt.Focus();
+                return;
+            }
+            if (DniTxt.Text == "")
+            {
+                MessageBox.Show("Falta documento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DniTxt.Focus();
+                return;
+            }
+            if (DomicilioTxt.Text == "")
+            {
+                MessageBox.Show("Falta domicilio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DomicilioTxt.Focus();
+                return;
+            }
+            if (TelefonoTxt.Text == "")
+            {
+                MessageBox.Show("Falta telefono", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TelefonoTxt.Focus();
+                return;
+            }
+            if(LocalidadCbo.Text == "")
+            {
+                MessageBox.Show("Falta seleccionar localidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LocalidadCbo.Focus();
+                return;
+            }
+            #endregion
+
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Socio = new Socio();
@@ -123,6 +152,7 @@ namespace clubApp.Views
             Socio.Observaciones = ObservacionesTxt.Text;
             Socio.Telefono = TelefonoTxt.Text;
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Socio);
+
             // intentar guardar en la Base de datos.
             try
             {
@@ -195,20 +225,33 @@ namespace clubApp.Views
             {
                 e.Handled = true;
             }            
-        }
-
-        private void ApellidoTxt_TextChanged(object sender, EventArgs e)
-        {
-            if(!this.ApellidoTxt.Text.All(c=>  Char.IsLetter(c) || Char.IsWhiteSpace(c)))
-            {
-             
-            }
-        }   
-
+        } 
         private void ActividadesBtn_Click(object sender, EventArgs e)
         {
 
         }
+        private void ApellidoTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void NombresTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TelefonoTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
