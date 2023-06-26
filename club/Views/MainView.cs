@@ -12,6 +12,7 @@ using System.Configuration;
 using Npgsql; // Libreria para conectar con PostgreSQL
 using clubApp.db; // incluir libreria para poder acceder a los objetos de negocios.
 
+
 namespace clubApp.Views
 {    
     public partial class MainView : FormBase
@@ -177,7 +178,10 @@ namespace clubApp.Views
             e.Cancel = true;
         }
 
-        
-        
+        private void BuscarLocalidad_mnu_Click(object sender, EventArgs e)
+        {
+            FrmLocalidadBusq frm = new FrmLocalidadBusq();
+            frm.Show();
+        }
     }
 }

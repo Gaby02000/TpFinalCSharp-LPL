@@ -182,16 +182,17 @@
             // LocalidadAM_mnu
             // 
             this.LocalidadAM_mnu.Name = "LocalidadAM_mnu";
-            this.LocalidadAM_mnu.Size = new System.Drawing.Size(113, 22);
+            this.LocalidadAM_mnu.Size = new System.Drawing.Size(180, 22);
             this.LocalidadAM_mnu.Tag = "AltaLocalidad";
             this.LocalidadAM_mnu.Text = "Ingreso";
             // 
             // BuscarLocalidad_mnu
             // 
             this.BuscarLocalidad_mnu.Name = "BuscarLocalidad_mnu";
-            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(113, 22);
+            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(180, 22);
             this.BuscarLocalidad_mnu.Tag = "ModificaLocalidad,ConsultaLocalidad";
             this.BuscarLocalidad_mnu.Text = "Buscar";
+            this.BuscarLocalidad_mnu.Click += new System.EventHandler(this.BuscarLocalidad_mnu_Click);
             // 
             // Actividad_mnu_top
             // 
@@ -308,7 +309,7 @@
             // SociosToolStripMenuItem
             // 
             this.SociosToolStripMenuItem.Name = "SociosToolStripMenuItem";
-            this.SociosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.SociosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.SociosToolStripMenuItem.Tag = "ConsultaSocio";
             this.SociosToolStripMenuItem.Text = "Socios";
             this.SociosToolStripMenuItem.Click += new System.EventHandler(this.ListadoSocioMnu_Click);
@@ -316,7 +317,7 @@
             // ProfesorsToolStripMenuItem
             // 
             this.ProfesorsToolStripMenuItem.Name = "ProfesorsToolStripMenuItem";
-            this.ProfesorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ProfesorsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.ProfesorsToolStripMenuItem.Tag = "ConsultaProfesor";
             this.ProfesorsToolStripMenuItem.Text = "Profesor";
             this.ProfesorsToolStripMenuItem.Click += new System.EventHandler(this.ListadoProfesors_Click);
@@ -324,42 +325,42 @@
             // localidadesToolStripMenuItem1
             // 
             this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
-            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.localidadesToolStripMenuItem1.Tag = "ConsultaLocalidad";
             this.localidadesToolStripMenuItem1.Text = "Localidades";
             // 
             // ActividadesToolStripMenuItem1
             // 
             this.ActividadesToolStripMenuItem1.Name = "ActividadesToolStripMenuItem1";
-            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.ActividadesToolStripMenuItem1.Tag = "ConsultaActividad";
             this.ActividadesToolStripMenuItem1.Text = "Actividades";
             // 
             // HorariosToolStripMenuItem
             // 
             this.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem";
-            this.HorariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.HorariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.HorariosToolStripMenuItem.Tag = "ConsultaHorario";
             this.HorariosToolStripMenuItem.Text = "Horarios";
             // 
             // auditoriaToolStripMenuItem
             // 
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.auditoriaToolStripMenuItem.Tag = "ConsultaAuditoria";
             this.auditoriaToolStripMenuItem.Text = "Auditoria";
             // 
             // CuotaToolStripMenuItem
             // 
             this.CuotaToolStripMenuItem.Name = "CuotaToolStripMenuItem";
-            this.CuotaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CuotaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.CuotaToolStripMenuItem.Tag = "ConsultaCuota";
             this.CuotaToolStripMenuItem.Text = "Cuota";
             // 
             // TipoActividadToolStripMenuItem1
             // 
             this.TipoActividadToolStripMenuItem1.Name = "TipoActividadToolStripMenuItem1";
-            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.TipoActividadToolStripMenuItem1.Tag = "ConsultaTipoActividad";
             this.TipoActividadToolStripMenuItem1.Text = "Tipo Actividad";
             // 
