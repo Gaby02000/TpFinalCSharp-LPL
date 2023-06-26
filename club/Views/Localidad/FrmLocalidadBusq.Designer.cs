@@ -33,19 +33,22 @@
             this.BuscarBtn = new System.Windows.Forms.Button();
             this.CodigoPostalChk = new System.Windows.Forms.CheckBox();
             this.CodPostalLabel = new System.Windows.Forms.Label();
+            this.NombreLabel = new System.Windows.Forms.Label();
+            this.NombreChk = new System.Windows.Forms.CheckBox();
+            this.NombreTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // CodigoPostalText
             // 
             this.CodigoPostalText.Location = new System.Drawing.Point(118, 25);
-            this.CodigoPostalText.Name = "textBox1";
+            this.CodigoPostalText.Name = "CodigoPostalText";
             this.CodigoPostalText.Size = new System.Drawing.Size(226, 20);
             this.CodigoPostalText.TabIndex = 1;
             this.CodigoPostalText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(286, 85);
+            this.CancelarBtn.Location = new System.Drawing.Point(286, 144);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
@@ -56,7 +59,7 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(198, 85);
+            this.BuscarBtn.Location = new System.Drawing.Point(205, 144);
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
@@ -65,11 +68,11 @@
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
             // 
-            // CodigoPostal
+            // CodigoPostalChk
             // 
             this.CodigoPostalChk.AutoSize = true;
             this.CodigoPostalChk.Location = new System.Drawing.Point(12, 27);
-            this.CodigoPostalChk.Name = "CodigoPostal";
+            this.CodigoPostalChk.Name = "CodigoPostalChk";
             this.CodigoPostalChk.Size = new System.Drawing.Size(15, 14);
             this.CodigoPostalChk.TabIndex = 12;
             this.CodigoPostalChk.UseVisualStyleBackColor = true;
@@ -79,16 +82,44 @@
             // 
             this.CodPostalLabel.AutoSize = true;
             this.CodPostalLabel.Location = new System.Drawing.Point(33, 27);
-            this.CodPostalLabel.Name = "CodPostal";
+            this.CodPostalLabel.Name = "CodPostalLabel";
             this.CodPostalLabel.Size = new System.Drawing.Size(72, 13);
             this.CodPostalLabel.TabIndex = 13;
             this.CodPostalLabel.Text = "Codigo Postal";
+            // 
+            // NombreLabel
+            // 
+            this.NombreLabel.AutoSize = true;
+            this.NombreLabel.Location = new System.Drawing.Point(61, 70);
+            this.NombreLabel.Name = "NombreLabel";
+            this.NombreLabel.Size = new System.Drawing.Size(44, 13);
+            this.NombreLabel.TabIndex = 16;
+            this.NombreLabel.Text = "Nombre";
+            // 
+            // NombreChk
+            // 
+            this.NombreChk.AutoSize = true;
+            this.NombreChk.Location = new System.Drawing.Point(36, 71);
+            this.NombreChk.Name = "NombreChk";
+            this.NombreChk.Size = new System.Drawing.Size(15, 14);
+            this.NombreChk.TabIndex = 15;
+            this.NombreChk.UseVisualStyleBackColor = true;
+            // 
+            // NombreTxt
+            // 
+            this.NombreTxt.Location = new System.Drawing.Point(118, 68);
+            this.NombreTxt.Name = "NombreTxt";
+            this.NombreTxt.Size = new System.Drawing.Size(226, 20);
+            this.NombreTxt.TabIndex = 14;
             // 
             // FrmLocalidadBusq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 144);
+            this.ClientSize = new System.Drawing.Size(391, 191);
+            this.Controls.Add(this.NombreLabel);
+            this.Controls.Add(this.NombreChk);
+            this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.CodPostalLabel);
             this.Controls.Add(this.CodigoPostalChk);
             this.Controls.Add(this.CancelarBtn);
@@ -109,5 +140,8 @@
         private System.Windows.Forms.CheckBox CodigoPostalChk;
         private System.Windows.Forms.Label CodPostalLabel;
         private System.Windows.Forms.ComboBox LocalidadCbo;
+        private System.Windows.Forms.Label NombreLabel;
+        private System.Windows.Forms.CheckBox NombreChk;
+        private System.Windows.Forms.TextBox NombreTxt;
     }
 }
