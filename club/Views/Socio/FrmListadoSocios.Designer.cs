@@ -1,6 +1,6 @@
 ﻿namespace clubApp.Views
 {
-    partial class FrmListadoLocalidad
+    partial class FrmListadoSocios
     {
         /// <summary>
         /// Required designer variable.
