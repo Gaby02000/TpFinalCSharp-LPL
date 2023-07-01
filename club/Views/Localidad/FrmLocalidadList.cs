@@ -48,5 +48,29 @@ namespace clubApp.Views
         {
 
         }
+     
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
+        {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK)
+            {
+                var selAnt = dataGridView1.SelectedRows[0].Index;
+                this.dataGridView1.DataSource = Localidad.FindAllStatic(_criterio, (e1, e2) => e1.Id.CompareTo(e2.Id));
+                dataGridView1.Rows[selAnt].Selected = true;
+                MessageBox.Show("localidad actualizada", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+                if (this.dataGridView1.SelectedRows.Count > 0)
+                            {
+
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmLocalidadAM frm = new FrmLocalidadAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarLocalidad(this, (this.dataGridView1.SelectedRows[0].DataBoundItem as Localidad));
+            }
+        }
     }
 }

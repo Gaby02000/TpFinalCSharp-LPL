@@ -52,5 +52,12 @@ namespace clubApp.db
         {
             return ORMDB<Localidad>.FindbyKey(key);
         }
+        public static bool ExisteLocalidad(int id)
+        {
+            var list = FindAllStatic("cod_postal=" + id.ToString(), null);
+            if (list != null && list.Count > 0)
+                return true;
+            return false;
+        }
     }
 }

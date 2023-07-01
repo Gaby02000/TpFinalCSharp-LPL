@@ -41,15 +41,9 @@ namespace clubApp.Views
             string criterio = null;
             if (this.CodigoPostalChk.Checked)
             {
-                if (criterio == null)
-                    criterio = String.Format("cod_postal={0} ", CodigoPostalText.Text);
-                else
-                    criterio += String.Format(" and cod_postal = {0}", CodigoPostalText.Text);
+                criterio = String.Format("cod_postal={0} ", CodigoPostalText.Text);
             }
-            if (this.NombreChk.Checked)
-            {
-                    criterio = String.Format("nombre like '%{0}%' ", NombreTxt.Text);
-            }
+            
             try
             {
                 var lista = Localidad.FindAllStatic(criterio, (p1, p2) => (p1.Id).CompareTo(p2.Id));

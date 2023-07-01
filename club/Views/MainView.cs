@@ -183,5 +183,18 @@ namespace clubApp.Views
             FrmLocalidadBusq frm = new FrmLocalidadBusq();
             frm.Show();
         }
+
+        private void LocalidadAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmLocalidadAM frm = new FrmLocalidadAM();
+            frm.ShowIngresoLocalidad();
+        }
+
+        private void localidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmLocalidadList frm = new FrmLocalidadList(); 
+            frm.Show();
+
+        }
     }
 }
