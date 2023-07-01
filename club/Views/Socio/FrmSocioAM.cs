@@ -184,12 +184,10 @@ namespace clubApp.Views
         {
             ShowInfoSocioInForm(Pac_modif, Invoker);
         }
-
         public void ShowModificarSocio(Socio Pac_modif)
         {
             ShowInfoSocioInForm(Pac_modif, null);
         }
-
         private void ShowInfoSocioInForm(Socio Cli_modif, FormBase Invoker)
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
@@ -202,14 +200,12 @@ namespace clubApp.Views
             this.CancelarBtn.Click+=new EventHandler(CancelarBtn_Click);
             this.ShowDialog();
         }
-
         public void ShowIngresoSocio(FormBase Invoker)
         {
             this.InvokerForm = Invoker;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
         }
-
         public void ShowIngresoSocio()
         {
             this.InvokerForm = null;
@@ -229,8 +225,7 @@ namespace clubApp.Views
             {
                 e.Handled = true;
             }            
-        }
-
+        } 
         private void ActividadesBtn_Click(object sender, EventArgs e)
         {
 

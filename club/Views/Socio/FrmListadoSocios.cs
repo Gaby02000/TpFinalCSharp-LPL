@@ -10,9 +10,9 @@ using clubApp.db;
 
 namespace clubApp.Views
 {
-    public partial class FrmListadoSocio : FormBase
+    public partial class FrmListadoLocalidad : FormBase
     {
-        public FrmListadoSocio()
+        public FrmListadoLocalidad()
         {
             InitializeComponent();
         }
