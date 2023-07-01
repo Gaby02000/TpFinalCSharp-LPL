@@ -36,7 +36,12 @@ namespace clubApp.Views
                 }
             }
         }
-        
+
+        private void FrmProfesorAM_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public override FrmOperacion OperacionForm
         {
             get
@@ -81,7 +86,7 @@ namespace clubApp.Views
             {
                 profesor = new Profesor();
                 operacionLog = "ALTA";
-                // cargar la info de la Socio antes de dar de alta.
+                // cargar la info de la Profesor antes de dar de alta.
             }
             if (OperacionForm == FrmOperacion.frmModificacion)
             {
@@ -139,9 +144,8 @@ namespace clubApp.Views
             profesor.NroDocumento = Int32.Parse(DniTxt.Text);
             profesor.Domicilio = DomicilioTxt.Text;
             profesor.Telefono = TelefonoTxt.Text;            
-            
-
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(profesor);
+            
             // intentar guardar en la Base de datos.
             try
             {
@@ -210,12 +214,6 @@ namespace clubApp.Views
             this.InvokerForm = null;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
-        }
-
-
-        private void FrmProfesorAM_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void DniTxt_KeyPress(object sender, KeyPressEventArgs e)
