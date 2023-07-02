@@ -133,6 +133,24 @@
     <Compile Include="Views\Common\CommonView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Localidad\FrmListadoLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidad\FrmListadoLocalidad.Designer.cs">
+      <DependentUpon>FrmListadoLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Localidad\FrmLocalidadBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidad\FrmLocalidadBusq.Designer.cs">
+      <DependentUpon>FrmLocalidadBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Localidad\FrmLocalidadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidad\FrmLocalidadList.Designer.cs">
+      <DependentUpon>FrmLocalidadList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Profesor\FrmProfesorBusq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,29 +175,11 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Socio\FrmListadoSocios.cs">
+    <Compile Include="Views\Profesor\FrmProfesorList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Socio\FrmListadoSocios.Designer.cs">
-      <DependentUpon>FrmListadoSocios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioBusq.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioBusq.Designer.cs">
-      <DependentUpon>FrmSocioBusq.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioList.Designer.cs">
-      <DependentUpon>FrmSocioList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioAM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Socio\FrmSocioAM.Designer.cs">
-      <DependentUpon>FrmSocioAM.cs</DependentUpon>
+    <Compile Include="Views\Profesor\FrmProfesorList.Designer.cs">
+      <DependentUpon>FrmProfesorList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Profesor\FrmListadoProfesores.cs">
       <SubType>Form</SubType>
@@ -193,6 +193,10 @@
     <Compile Include="Views\Profesor\FrmProfesorAM.Designer.cs">
       <DependentUpon>FrmProfesorAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Socio\FrmListadoSocios.cs" />
+    <Compile Include="Views\Socio\FrmSocioAM.cs" />
+    <Compile Include="Views\Socio\FrmSocioBusq.cs" />
+    <Compile Include="Views\Socio\FrmSocioList.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -211,18 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Socio\FrmListadoSocios.resx">
-      <DependentUpon>FrmListadoSocios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Socio\FrmSocioBusq.resx">
-      <DependentUpon>FrmSocioBusq.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Socio\FrmSocioList.resx">
-      <DependentUpon>FrmSocioList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Socio\FrmSocioAM.resx">
-      <DependentUpon>FrmSocioAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Profesor\FrmListadoProfesores.resx">
       <DependentUpon>FrmListadoProfesores.cs</DependentUpon>

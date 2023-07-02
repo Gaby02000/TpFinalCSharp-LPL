@@ -145,7 +145,7 @@ namespace clubApp.Views
 
         private void ListadoSocioMnu_Click(object sender, EventArgs e)
         {
-            FrmListadoSocios frmListPac = new FrmListadoSocios();
+            FrmListadoSocio frmListPac = new FrmListadoSocio();
             frmListPac.Show();
         }
 

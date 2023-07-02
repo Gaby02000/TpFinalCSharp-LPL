@@ -28,8 +28,10 @@ namespace clubApp.Views
         }
 
         private void FrmListadoSocios_Load(object sender, EventArgs e)
-        {            
-            LoadComboBox( Localidad.FindAllStatic(null , (l1,l2)=> l1.Nombre.CompareTo(l2.Nombre)) , this.LocalidadCbo, addSeleccion: true);
+        {
+            LoadComboBox(Localidad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)),
+                         LocalidadCbo,
+                         addSeleccion: true);
                                     
             this.SociosGrd.AutoGenerateColumns = false;
             this.SociosGrd.DataSource = Socio.FindAllStatic (null, (p1,p2)=> (p1.Apellido + p1.Nombres).CompareTo(p2.Apellido+p2.Nombres));
