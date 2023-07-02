@@ -42,13 +42,11 @@ namespace clubApp.db
             get { return _cod_tipo_act; }
             set { _cod_tipo_act = value; }
         }
-        [Propiedad(Name = "fecha_desde", Tipo = typeof(DateTime))]
         public DateTime FechaDesde
         {
             get { return _fecha_desde; }
             set { _fecha_desde = value; }
         }
-        [Propiedad(Name = "fecha_fin", Tipo = typeof(DateTime))]
         public DateTime? FechaHasta
         {
             get { return _fecha_hasta; }
