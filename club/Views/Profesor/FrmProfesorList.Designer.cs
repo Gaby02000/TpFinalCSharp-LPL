@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ListadoGbo = new System.Windows.Forms.GroupBox();
             this.ProfesoresGrd = new System.Windows.Forms.DataGridView();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CerrarBtn = new System.Windows.Forms.Button();
             this.LegajoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DomicilioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TelefonoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CerrarBtn = new System.Windows.Forms.Button();
             this.ListadoGbo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfesoresGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ListadoGbo
@@ -54,6 +57,7 @@
             // 
             // ProfesoresGrd
             // 
+            this.ProfesoresGrd.AutoGenerateColumns = false;
             this.ProfesoresGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProfesoresGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LegajoCol,
@@ -62,45 +66,21 @@
             this.NombreCol,
             this.DomicilioCol,
             this.TelefonoCol});
+            this.ProfesoresGrd.DataSource = this.profesorBindingSource;
             this.ProfesoresGrd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProfesoresGrd.Location = new System.Drawing.Point(3, 16);
             this.ProfesoresGrd.Name = "ProfesoresGrd";
+            this.ProfesoresGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProfesoresGrd.Size = new System.Drawing.Size(770, 245);
             this.ProfesoresGrd.TabIndex = 0;
             this.ProfesoresGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProfesoresGrd_CellContentClick);
-            this.ProfesoresGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ProfesoresGrd_DataBindingComplete);
             this.ProfesoresGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ProfesoresGrd_ColumnHeaderMouseClick);
-            //this.ProfesoresGrd.DoubleClick += new System.EventHandler(this.ProfesoresGrd_DoubleClick);
+            //this.ProfesoresGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ProfesoresGrd_DataBindingComplete);
+            this.ProfesoresGrd.DoubleClick += new System.EventHandler(this.ProfesoresGrd_DoubleClick);
             // 
-            // LegajoCol
+            // profesorBindingSource
             // 
-            this.LegajoCol.HeaderText = "Legajo";
-            this.LegajoCol.Name = "LegajoCol";
-            // 
-            // DniCol
-            // 
-            this.DniCol.HeaderText = "Dni";
-            this.DniCol.Name = "DniCol";
-            // 
-            // ApellidoCol
-            // 
-            this.ApellidoCol.HeaderText = "Apellido";
-            this.ApellidoCol.Name = "ApellidoCol";
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.HeaderText = "Nombre";
-            this.NombreCol.Name = "NombreCol";
-            // 
-            // DomicilioCol
-            // 
-            this.DomicilioCol.HeaderText = "Domicilio";
-            this.DomicilioCol.Name = "DomicilioCol";
-            // 
-            // TelefonoCol
-            // 
-            this.TelefonoCol.HeaderText = "Telefono";
-            this.TelefonoCol.Name = "TelefonoCol";
+            this.profesorBindingSource.DataSource = typeof(clubApp.db.Profesor);
             // 
             // CerrarBtn
             // 
@@ -111,6 +91,42 @@
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            // 
+            // LegajoCol
+            // 
+            this.LegajoCol.DataPropertyName = "Legajo";
+            this.LegajoCol.HeaderText = "Legajo";
+            this.LegajoCol.Name = "LegajoCol";
+            // 
+            // DniCol
+            // 
+            this.DniCol.DataPropertyName = "NroDocumento";
+            this.DniCol.HeaderText = "Dni";
+            this.DniCol.Name = "DniCol";
+            // 
+            // ApellidoCol
+            // 
+            this.ApellidoCol.DataPropertyName = "Apellido";
+            this.ApellidoCol.HeaderText = "Apellido";
+            this.ApellidoCol.Name = "ApellidoCol";
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.HeaderText = "Nombre";
+            this.NombreCol.Name = "NombreCol";
+            // 
+            // DomicilioCol
+            // 
+            this.DomicilioCol.DataPropertyName = "Domicilio";
+            this.DomicilioCol.HeaderText = "Domicilio";
+            this.DomicilioCol.Name = "DomicilioCol";
+            // 
+            // TelefonoCol
+            // 
+            this.TelefonoCol.DataPropertyName = "Telefono";
+            this.TelefonoCol.HeaderText = "Telefono";
+            this.TelefonoCol.Name = "TelefonoCol";
             // 
             // FrmProfesorList
             // 
@@ -124,6 +140,7 @@
             this.Load += new System.EventHandler(this.FrmProfesorList_Load);
             this.ListadoGbo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProfesoresGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,6 +150,7 @@
         private System.Windows.Forms.GroupBox ListadoGbo;
         private System.Windows.Forms.Button CerrarBtn;
         private System.Windows.Forms.DataGridView ProfesoresGrd;
+        private System.Windows.Forms.BindingSource profesorBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn LegajoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoCol;

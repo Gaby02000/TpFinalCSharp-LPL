@@ -31,13 +31,6 @@ namespace clubApp.Views
             this.InvokerForm = Invoker;
             _listado = listado;
             _criterio = criterio;
-            /*if (!string.IsNullOrEmpty(criterio))
-            {
-                // Filtrar la lista de profesores según el criterio
-                _listado = listado.Where(profesor => profesor.Apellido.Contains(criterio)
-                                                     || profesor.Nombres.Contains(criterio)
-                                                     || profesor.Legajo.ToString() == criterio).ToList();
-            }*/
             this.ProfesoresGrd.AutoGenerateColumns = false;
             var bindingList = new BindingList<Profesor>(listado);
             var source = new BindingSource(bindingList, null);
@@ -47,19 +40,23 @@ namespace clubApp.Views
             this.Show();
         }
 
-        private void ProfesoresGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        /*private void ProfesoresGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow rw in this.ProfesoresGrd.Rows)
             {
+                rw.Cells[0].Value = (rw.DataBoundItem as Profesor).Legajo;
+                rw.Cells[1].Value = (rw.DataBoundItem as Profesor).NroDocumento;
                 rw.Cells[2].Value = (rw.DataBoundItem as Profesor).Apellido;
+                rw.Cells[3].Value = (rw.DataBoundItem as Profesor).Nombres;
+                rw.Cells[4].Value = (rw.DataBoundItem as Profesor).Domicilio;
+                rw.Cells[5].Value = (rw.DataBoundItem as Profesor).Telefono;
             }
-        }
+        }*/
 
         private void ProfesoresGrd_DoubleClick(object sender, EventArgs e)
         {
             if (this.ProfesoresGrd.SelectedRows.Count > 0)
             {
-
                 MainView.Instance.Cursor = Cursors.WaitCursor;
                 FrmProfesorAM frm = new FrmProfesorAM();
                 frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
@@ -75,7 +72,7 @@ namespace clubApp.Views
                 var selAnt = ProfesoresGrd.SelectedRows[0].Index;
                 this.ProfesoresGrd.DataSource = Profesor.FindAllStatic(_criterio, (e1, e2) => e1.NroDocumento.CompareTo(e2.NroDocumento));
                 ProfesoresGrd.Rows[selAnt].Selected = true;
-                MessageBox.Show("Socio actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Profesor actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

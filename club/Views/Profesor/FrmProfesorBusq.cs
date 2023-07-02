@@ -31,7 +31,7 @@ namespace clubApp.Views
 
         }
 
-        private void FrmSocioBusq_Activated(object sender, EventArgs e)
+        private void FrmProfesorBusq_Activated(object sender, EventArgs e)
         {
             MainView.Instance.Cursor = Cursors.Default;
         }
@@ -63,18 +63,20 @@ namespace clubApp.Views
 
             if (this.NombreChk.Checked)
             {
-                if (criterio == null)
+                criterio = String.Format(" nombre like '%{0}%' ", NombreTxt.Text);
+                /*if (criterio == null)
                     criterio = String.Format(" nombre like '%{0}%' ", NombreTxt.Text);
                 else
-                    criterio += String.Format(" and nombre like '%{0}%' ", NombreTxt.Text);
+                    criterio += String.Format(" and nombre like '%{0}%' ", NombreTxt.Text);*/
             }
 
             if (this.LegajoChk.Checked)
             {
-                if (criterio == null)
+                criterio = String.Format(" legajo = {0} ", LegajoTxt.Text);
+                /*if (criterio == null)
                     criterio = String.Format(" legajo = {0} ", LegajoTxt.Text);
                 else
-                    criterio += String.Format(" and legajo = {0} ", LegajoTxt.Text);
+                    criterio += String.Format(" and legajo = {0} ", LegajoTxt.Text);*/
             }
 
             try

@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.ApellidoBox = new System.Windows.Forms.GroupBox();
             this.ApellidoTxt = new System.Windows.Forms.TextBox();
             this.ApellidoChk = new System.Windows.Forms.CheckBox();
             this.ProfesoresGrd = new System.Windows.Forms.DataGridView();
-            this.LegajoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DomicilioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelefonoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nroDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legajoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfesoresGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // FiltroBtn
@@ -74,6 +77,7 @@
             this.ApellidoTxt.Name = "ApellidoTxt";
             this.ApellidoTxt.Size = new System.Drawing.Size(146, 20);
             this.ApellidoTxt.TabIndex = 1;
+            this.ApellidoTxt.Tag = "Apellido";
             // 
             // ApellidoChk
             // 
@@ -91,15 +95,17 @@
             // 
             this.ProfesoresGrd.AllowUserToAddRows = false;
             this.ProfesoresGrd.AllowUserToDeleteRows = false;
+            this.ProfesoresGrd.AutoGenerateColumns = false;
             this.ProfesoresGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProfesoresGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LegajoCol,
-            this.DniCol,
-            this.ApellidoCol,
-            this.NombreCol,
-            this.DomicilioCol,
-            this.TelefonoCol});
-            this.ProfesoresGrd.Location = new System.Drawing.Point(9, 55);
+            this.nroDocumentoDataGridViewTextBoxColumn,
+            this.legajoDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn,
+            this.nombresDataGridViewTextBoxColumn,
+            this.domicilioDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn});
+            this.ProfesoresGrd.DataSource = this.profesorBindingSource;
+            this.ProfesoresGrd.Location = new System.Drawing.Point(13, 55);
             this.ProfesoresGrd.Margin = new System.Windows.Forms.Padding(2);
             this.ProfesoresGrd.MultiSelect = false;
             this.ProfesoresGrd.Name = "ProfesoresGrd";
@@ -108,50 +114,53 @@
             this.ProfesoresGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProfesoresGrd.Size = new System.Drawing.Size(826, 352);
             this.ProfesoresGrd.TabIndex = 5;
-            this.ProfesoresGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProfesoresGrd_CellContentClick_1);
+            this.ProfesoresGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProfesoresGrd_CellContentClick);
             // 
-            // LegajoCol
+            // profesorBindingSource
             // 
-            this.LegajoCol.DataPropertyName = "Legajo";
-            this.LegajoCol.HeaderText = "Legajo";
-            this.LegajoCol.Name = "LegajoCol";
-            this.LegajoCol.ReadOnly = true;
+            this.profesorBindingSource.DataSource = typeof(clubApp.db.Profesor);
             // 
-            // DniCol
+            // nroDocumentoDataGridViewTextBoxColumn
             // 
-            this.DniCol.DataPropertyName = "NroDocumento";
-            this.DniCol.HeaderText = "Dni";
-            this.DniCol.Name = "DniCol";
-            this.DniCol.ReadOnly = true;
+            this.nroDocumentoDataGridViewTextBoxColumn.DataPropertyName = "NroDocumento";
+            this.nroDocumentoDataGridViewTextBoxColumn.HeaderText = "NroDocumento";
+            this.nroDocumentoDataGridViewTextBoxColumn.Name = "nroDocumentoDataGridViewTextBoxColumn";
+            this.nroDocumentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ApellidoCol
+            // legajoDataGridViewTextBoxColumn
             // 
-            this.ApellidoCol.DataPropertyName = "Apellido";
-            this.ApellidoCol.HeaderText = "Apellido";
-            this.ApellidoCol.Name = "ApellidoCol";
-            this.ApellidoCol.ReadOnly = true;
+            this.legajoDataGridViewTextBoxColumn.DataPropertyName = "Legajo";
+            this.legajoDataGridViewTextBoxColumn.HeaderText = "Legajo";
+            this.legajoDataGridViewTextBoxColumn.Name = "legajoDataGridViewTextBoxColumn";
+            this.legajoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // NombreCol
+            // apellidoDataGridViewTextBoxColumn
             // 
-            this.NombreCol.DataPropertyName = "Nombres";
-            this.NombreCol.HeaderText = "Nombres";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // DomicilioCol
+            // nombresDataGridViewTextBoxColumn
             // 
-            this.DomicilioCol.DataPropertyName = "Domicilio";
-            this.DomicilioCol.HeaderText = "Domicilio";
-            this.DomicilioCol.Name = "DomicilioCol";
-            this.DomicilioCol.ReadOnly = true;
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // TelefonoCol
+            // domicilioDataGridViewTextBoxColumn
             // 
-            this.TelefonoCol.DataPropertyName = "Telefono";
-            this.TelefonoCol.HeaderText = "Telefono";
-            this.TelefonoCol.Name = "TelefonoCol";
-            this.TelefonoCol.ReadOnly = true;
+            this.domicilioDataGridViewTextBoxColumn.DataPropertyName = "Domicilio";
+            this.domicilioDataGridViewTextBoxColumn.HeaderText = "Domicilio";
+            this.domicilioDataGridViewTextBoxColumn.Name = "domicilioDataGridViewTextBoxColumn";
+            this.domicilioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmListadoProfesores
             // 
@@ -168,6 +177,7 @@
             this.ApellidoBox.ResumeLayout(false);
             this.ApellidoBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfesoresGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,11 +189,12 @@
         private System.Windows.Forms.TextBox ApellidoTxt;
         private System.Windows.Forms.CheckBox ApellidoChk;
         private System.Windows.Forms.DataGridView ProfesoresGrd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LegajoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DomicilioCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoCol;
+        private System.Windows.Forms.BindingSource profesorBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroDocumentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domicilioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
     }
 }

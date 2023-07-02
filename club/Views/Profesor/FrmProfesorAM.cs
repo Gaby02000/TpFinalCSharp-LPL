@@ -36,7 +36,6 @@ namespace clubApp.Views
                 }
             }
         }
-
         private void FrmProfesorAM_Load(object sender, EventArgs e)
         {
 
@@ -65,7 +64,6 @@ namespace clubApp.Views
                     this.Text = "Consulta de datos de Profesor...";
                     this.GuardarBtn.Visible = false;
                 }
-
             }
         }
 
@@ -198,6 +196,7 @@ namespace clubApp.Views
             // cargar cada control con informacion del Profesor....
             FormBase.ShowDataFromModel(this, Profesor_modif);
             this.InvokerForm = Invoker;
+            this.CancelarBtn.Click += new EventHandler(CancelarBtn_Click);
             this.ShowDialog();
 
         }
@@ -234,5 +233,9 @@ namespace clubApp.Views
             }
         }
 
+        private void DomicilioLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

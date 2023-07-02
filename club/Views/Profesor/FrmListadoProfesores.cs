@@ -37,26 +37,24 @@ namespace clubApp.Views
             {
                 if (criterio != null)
                 {
-                    //criterio = String.Format("SELECT legajo, dni, nombres, apellido, domicilio, telefono FROM profesor WHERE apellido LIKE '%{0}%' ", this.ApellidoTxt.Text);
-                    criterio += " AND apellido LIKE " + ApellidoTxt.Text;
+                    criterio = String.Format(" and apellido like '%{0}%' ", ApellidoTxt.Text);
                 }
                 else
-                    //criterio = String.Format("SELECT legajo, dni, nombres, apellido, domicilio, telefono FROM profesor WHERE apellido LIKE '%{0}%' ", this.ApellidoTxt.Text);
-                    criterio = " apellido LIKE " + ApellidoTxt.Text;
+                    criterio = String.Format(" apellido like '%{0}%' ", ApellidoTxt.Text);
             }
 
-            //this.ProfesoresGrd.AutoGenerateColumns = false;
+            this.ProfesoresGrd.AutoGenerateColumns = false;
             //this.ProfesoresGrd.DataSource = ORMDB<Profesor>.FindAll(criterio);
             this.ProfesoresGrd.DataSource = Profesor.FindAllStatic(criterio, (p1, p2) => (p1.Apellido + p1.Nombres).CompareTo(p2.Apellido + p2.Nombres));
         }
 
-        private void ProfesoresGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        /*private void ProfesoresGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow rw in this.ProfesoresGrd.Rows)
             {
                 rw.Cells[2].Value = (rw.DataBoundItem as Profesor).Apellido;
             }
-        }
+        }*/
 
         public void ShowListar()
         {
@@ -73,9 +71,9 @@ namespace clubApp.Views
 
         }
 
-        private void ProfesoresGrd_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        /*private void ProfesoresGrd_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
+        }*/
     }
 }
